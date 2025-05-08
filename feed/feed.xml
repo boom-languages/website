@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="pretty-atom-feed.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>PageKey</title>
+  <subtitle>Take Back Tech.</subtitle>
+  <link href="https://pagekey.io/feed/feed.xml" rel="self" />
+  <link href="https://pagekey.io/" />
+  <updated>2025-05-08T00:00:00Z</updated>
+  <id>https://pagekey.io/</id>
+  <author>
+    <name>Steve G.</name>
+  </author>
+  <entry>
+    <title>Test Post</title>
+    <link href="https://pagekey.io/blog/2025/05/test-post/" />
+    <updated>2025-05-08T00:00:00Z</updated>
+    <id>https://pagekey.io/blog/2025/05/test-post/</id>
+    <content type="html">
+&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Hello this is a test post.&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;
+</content>
+  </entry>
+</feed>
