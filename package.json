@@ -1,7 +1,7 @@
 {
-	"name": "pagekey-website",
+	"name": "boom-website",
 	"version": "0.0.0",
-	"description": "Website for PageKey.",
+	"description": "Website/blog for Boom Languages.",
 	"type": "module",
 	"scripts": {
 		"build": "npx @11ty/eleventy",

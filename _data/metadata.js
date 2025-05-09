@@ -1,11 +1,11 @@
 export default {
-	title: "PageKey - Take Back Tech",
-	url: "https://pagekey.io/",
+	title: "Boom Languages",
+	url: "https://boomlanguages.com/",
 	language: "en",
-	description: "Self-hosting, tech deep dives, and more.",
+	description: "Learn your journey.",
 	author: {
 		name: "Steve G.",
-		email: "steve@pagekey.io",
-		url: "https://github.com/pagekey/"
+		email: "steve@boomlanguages.com",
+		url: "https://github.com/stephengrice/"
 	}
 }

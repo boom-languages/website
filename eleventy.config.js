@@ -64,9 +64,9 @@ export default async function(eleventyConfig) {
 		},
 		metadata: {
 			language: "en",
-			title: "PageKey",
-			subtitle: "Take Back Tech.",
-			base: "https://pagekey.io/",
+			title: "Boom Languages",
+			subtitle: "Learn your journey.",
+			base: "https://boomlanguages.com/",
 			author: {
 				name: "Steve G."
 			}
@@ -101,7 +101,7 @@ export default async function(eleventyConfig) {
 		// by default we use Eleventy’s built-in `slugify` filter:
 		// slugify: eleventyConfig.getFilter("slugify"),
 		// selector: "h1,h2,h3,h4,h5,h6", // default
-		// checkDuplicates: "false",
+		checkDuplicates: "false",
 	});
 	// LaTeX
 	eleventyConfig.addPlugin(mathjaxPlugin);
