@@ -1,4 +1,3 @@
-import boomLogo from './assets/BoomLogo2025.svg'
 import Logo from './assets/BoomLogo2025.svg?react';
 import './App.css'
 import { useState } from 'react';
@@ -15,8 +14,8 @@ function App() {
   return (
     <>
       <div>
-        <a href="#">
-          <Logo className="logo react" alt="Boom Languages Logo" />
+        <a>
+          <Logo className="logo react" />
         </a>
       </div>
       <h2>Learn languages for real.</h2>
