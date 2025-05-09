@@ -4,9 +4,31 @@ import { useState } from 'react';
 
 function App() {
   const [email, setEmail] = useState<string>("");
-  
+  const [signupStatus, setSignupStatus] = useState<"ready" | "loading" | "done" | "error">("ready");
+
   const handleSignup = () => {
-    console.log('hi')
+    setSignupStatus("loading");
+    fetch(
+      "https://zu0rim0p04.execute-api.us-east-1.amazonaws.com/default/email-signup-handler",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          "email": email,
+          "newsletter": "boom",
+        }),
+      },
+    ).then((resp) => {
+      if (resp.status == 200) {
+        setSignupStatus("done");
+      } else {
+        setSignupStatus("error");
+      }
+    }).catch(() => {
+      setSignupStatus("error");
+    })
   };
   const emailValid = () => {
     return email.length > 0 && email.includes("@") && email.includes(".");
@@ -35,12 +57,25 @@ function App() {
         <p>
           (We're looking for beta testers too!)
         </p>
-        <p>
-          <input className="email-input" placeholder="your@email.com" value={email} onChange={e => setEmail(e.target.value)} />
-        </p>
-        <button disabled={!emailValid()} onClick={handleSignup}>
-          I'm interested.
-        </button>
+        {signupStatus == "ready" && (
+          <>
+            <p>
+              <input className="email-input" placeholder="your@email.com" value={email} onChange={e => setEmail(e.target.value)} />
+            </p>
+            <button disabled={!emailValid()} onClick={handleSignup}>
+              I'm interested.
+            </button>
+          </>
+        )}
+        {signupStatus == "loading" && (
+          <p style={{ fontSize: "80%" }}>Loading...</p>
+        )}
+        {signupStatus == "done" && (
+          <p style={{ color: 'green' }}>Thank you for signing up! We'll be in touch. 🙂</p>
+        )}
+        {signupStatus == "error" && (
+          <p style={{ color: 'red' }}>An error occurred. Please email <a href="mailto:newsletter@boomlanguages.com">newsletter@boomlanguages.com</a> to sign up manually.</p>
+        )}
       </div>
       <p className="read-the-docs">
         A <a href="https://pagekey.io/">PageKey</a> project.
