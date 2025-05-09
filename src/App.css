@@ -6,6 +6,7 @@
 }
 
 .logo {
+  color: black;
   height: 6em;
   padding: 1.5em;
   will-change: filter;
@@ -42,4 +43,43 @@
 .read-the-docs {
   color: #888;
   font-size: 80%;
+}
+
+input.email-input {
+  text-align: center;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+input.email-input:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
+}
+@media (prefers-color-scheme: dark) {
+  .logo {
+    color: white;
+  }
+  input.email-input {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border: 1px solid #444;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+  }
+
+  input.email-input::placeholder {
+    color: #888;
+  }
+
+  input.email-input:focus {
+    border-color: #3399ff;
+    box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.3);
+    background-color: #252525;
+  }
 }

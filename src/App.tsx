@@ -1,15 +1,22 @@
-import { useState } from 'react'
 import boomLogo from './assets/BoomLogo2025.svg'
+import Logo from './assets/BoomLogo2025.svg?react';
 import './App.css'
+import { useState } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [email, setEmail] = useState<string>("");
+  
+  const handleSignup = () => {
+    console.log('hi')
+  };
+  const emailValid = () => {
+    return email.length > 0 && email.includes("@") && email.includes(".");
+  }
   return (
     <>
       <div>
-        <a href="https://react.dev" target="_blank">
-          <img src={boomLogo} className="logo react" alt="React logo" />
+        <a href="#">
+          <Logo className="logo react" alt="Boom Languages Logo" />
         </a>
       </div>
       <h2>Learn languages for real.</h2>
@@ -29,7 +36,10 @@ function App() {
         <p>
           (We're looking for beta testers too!)
         </p>
-        <button>
+        <p>
+          <input className="email-input" placeholder="your@email.com" value={email} onChange={e => setEmail(e.target.value)} />
+        </p>
+        <button disabled={!emailValid()} onClick={handleSignup}>
           I'm interested.
         </button>
       </div>
