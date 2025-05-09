@@ -1,7 +1,5 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -11,6 +9,7 @@
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+  width: 100%;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
@@ -35,6 +34,7 @@
 }
 
 .card {
+  margin: auto;
   padding: 2em;
   font-size: 120%;
   max-width: 800px;
